@@ -9,14 +9,35 @@ body {
 
 .rating {
   display: flex;
+  flex-direction: row-reverse;
   gap: 10px;
 }
 
+.rating input {
+  display: none;
+}
+
 .star {
-  font-size: 80px;
-  line-height: 1;
-  color: #fff;
-  -webkit-text-stroke: 4px #000;
-  /* Убираем лишние отступы у символа */
   display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-image: url('img/star-empty.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rating input:checked~.star {
+  background-image: url('img/star.svg');
+}
+
+.rating:hover .star {
+  background-image: url('img/star-empty.svg');
+}
+
+.rating .star:hover,
+.rating .star:hover~.star {
+  background-image: url('img/star.svg');
+  transform: scale(1.1);
 }
