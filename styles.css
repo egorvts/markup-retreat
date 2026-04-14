@@ -1,1 +1,25 @@
-/* Пиши стили тут */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fff;
+}
+
+.rating {
+  display: flex;
+  gap: 10px;
+}
+
+.rating svg {
+  width: 50px;
+  height: 50px;
+}
+
+.rating svg path {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 40px;
+  stroke-linejoin: round;
+}
